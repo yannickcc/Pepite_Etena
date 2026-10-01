@@ -1,6 +1,6 @@
 # Inventaire Ionos (DNS)
 
-Généré le 2026-10-01 via l'API DNS Ionos (lecture seule). Ne couvre que les zones DNS : ni contrats, ni hébergement, ni boîtes mail, ni factures.
+Généré le 2026-10-01 via l'API DNS Ionos (lecture seule). Couvre les zones DNS, les domaines et les certificats SSL : ni contrats, ni hébergement, ni boîtes mail, ni factures.
 
 ## Synthèse
 
@@ -19,6 +19,27 @@ Généré le 2026-10-01 via l'API DNS Ionos (lecture seule). Ne couvre que les z
 - Sous-domaines Ionos de `calvez-calvez.com` : `tumblr.`, `ftp.`, `ftp.tumblr.`.
 - `calvez-calvez.com` utilise encore des noms `1and1.*` (ancien contrat 1&1).
 - Marqueurs `_dep_ws_mutex.*` et `_domainconnect` : résidus de déploiement Ionos.
+
+## Domaines enregistrés chez Ionos
+
+Via l'API Domaines. `aimant.studio` a une zone DNS chez Ionos mais n'apparaît pas ici (enregistré ailleurs ou sur un autre contrat : à vérifier). DNSSEC désactivé partout.
+
+| Domaine | Expiration | Renouvellement auto | Verrou |
+|---|---|---|---|
+| `calvez-calvez.com` | 2027-04-29 | oui | oui |
+| `chateauvacant.com` | 2027-03-24 | oui | oui |
+| `yannickcalvez.com` | 2027-04-28 | oui | **non** |
+
+## Certificats SSL
+
+Via l'API SSL (certificats complets non reproduits).
+
+| Type | Nom commun | Statut | Valable jusqu'au |
+|---|---|---|---|
+| Starter Wildcard | `*.calvez-calvez.com` | actif | **2026-10-31** |
+| Starter Wildcard | `*.aimant.studio` | actif | 2026-12-08 |
+| Starter | `www.yannickcalvez.com` | actif | 2027-01-09 |
+| Starter Wildcard | `*.chateauvacant.com` | actif | 2027-04-06 |
 
 ## Détail des enregistrements
 
